@@ -154,6 +154,26 @@ const MainProfile = () => {
                         />
                     </TouchableOpacity>
                 </View>
+                <View style={styles.aboutSection}>
+                    <View style={styles.iconPlaceholder}>
+                        <Ionicons
+                            name="school-outline"
+                            size={30}
+                            color="#000"
+                        />
+                    </View>
+                    <Text style={styles.aboutText}>Academics</Text>
+                    <TouchableOpacity
+                        style={styles.orangeButton}
+                        onPress={() => navigation.navigate("Academics")}
+                    >
+                        <Ionicons
+                            name="chevron-forward-outline"
+                            size={15}
+                            color="#FFF"
+                        />
+                    </TouchableOpacity>
+                </View>
             </View>
         </ScrollView>
     );

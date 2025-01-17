@@ -7,12 +7,17 @@ import {
     TouchableOpacity,
 } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const MyProjects = () => {
+    const navigation = useNavigation();
     return (
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.projectContainer}>
-                <TouchableOpacity style={styles.card}>
+                <TouchableOpacity
+                    style={styles.card}
+                    onPress={() => navigation.navigate("ExploreLDCU")}
+                >
                     <Image
                         source={require("../assets/projects/map-app/adaptive-icon.png")}
                         style={styles.image}
@@ -21,7 +26,10 @@ const MyProjects = () => {
                 </TouchableOpacity>
             </View>
             <View style={styles.projectContainer}>
-                <TouchableOpacity style={styles.card}>
+                <TouchableOpacity
+                    style={styles.card}
+                    onPress={() => navigation.navigate("Motodachi")}
+                >
                     <Image
                         source={require("../assets/projects/motodachi/text_logo_black.png")}
                         style={styles.image}

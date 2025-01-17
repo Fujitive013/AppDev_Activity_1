@@ -11,23 +11,41 @@ import React from "react";
 const MyHobbies = () => {
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            <View style={styles.projectContainer}>
-                <TouchableOpacity style={styles.card}>
-                    <Image
-                        source={require("../assets/projects/map-app/adaptive-icon.png")}
-                        style={styles.image}
-                    />
-                    <Text style={styles.projectTitle}>ExploreLDCU!</Text>
-                </TouchableOpacity>
+            <View style={styles.hobbyContainer}>
+                <Image
+                    source={require("../assets/hobbies/reading.jpg")}
+                    style={styles.hobbyImage}
+                />
+                <Text style={styles.hobbyTitle}>Reading</Text>
+                <Text style={styles.hobbyDescription}>
+                    I love reading books, especially fiction. It allows me to
+                    dive into different worlds and improve my imagination.
+                </Text>
             </View>
-            <View style={styles.projectContainer}>
-                <TouchableOpacity style={styles.card}>
-                    <Image
-                        source={require("../assets/projects/motodachi/text_logo_black.png")}
-                        style={styles.image}
-                    />
-                    <Text style={styles.projectTitle}>Motodachi</Text>
-                </TouchableOpacity>
+            <View style={styles.hobbyContainer}>
+                <Image
+                    source={require("../assets/hobbies/watching.jpg")}
+                    style={styles.hobbyImage}
+                />
+                <Text style={styles.hobbyTitle}>Watching</Text>
+                <Text style={styles.hobbyDescription}>
+                    I enjoy watching diverse forms of media, from movies to
+                    series, as it allows me to explore different genres,
+                    cultures, and storytelling techniques. This hobby enriches
+                    my creativity and offers a relaxing escape.
+                </Text>
+            </View>
+            <View style={styles.hobbyContainer}>
+                <Image
+                    source={require("../assets/hobbies/gaming.jpg")}
+                    style={styles.hobbyImage}
+                />
+                <Text style={styles.hobbyTitle}>Gaming</Text>
+                <Text style={styles.hobbyDescription}>
+                    Gaming is my way to relax and unwind. I enjoy playing
+                    strategy and action games, which challenge my mind and
+                    reflexes.
+                </Text>
             </View>
         </ScrollView>
     );
@@ -40,29 +58,32 @@ const styles = StyleSheet.create({
         padding: 20,
         backgroundColor: "#f5f5f5",
     },
-    projectContainer: {
+    hobbyContainer: {
         marginBottom: 20,
-    },
-    card: {
         backgroundColor: "#fff",
+        borderRadius: 10,
         padding: 15,
-        borderRadius: 10,
-        alignItems: "center",
-        elevation: 3,
         shadowColor: "#000",
+        shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.1,
-        shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
+        elevation: 3,
     },
-    image: {
-        width: 100,
-        height: 100,
-        marginBottom: 10,
+    hobbyImage: {
+        width: "100%",
+        height: 200,
         borderRadius: 10,
+        marginBottom: 10,
+        resizeMode: "cover",
     },
-    projectTitle: {
-        fontSize: 18,
+    hobbyTitle: {
+        fontSize: 20,
         fontWeight: "bold",
         color: "#333",
+    },
+    hobbyDescription: {
+        fontSize: 16,
+        color: "#555",
+        marginTop: 5,
     },
 });
