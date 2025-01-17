@@ -124,7 +124,7 @@ const Academics = () => {
                     Vicente N. Chavez Memorial Central School
                 </Text>
                 <Text style={styles.details}>
-                    Graduation Year: ???
+                    Graduation Year: 2016
                     {"\n"}Location: Villanueva, Misamis Oriental, Philippines
                 </Text>
                 <ScrollView
