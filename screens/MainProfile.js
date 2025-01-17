@@ -5,12 +5,16 @@ import {
     Image,
     ScrollView,
     Dimensions,
+    TouchableOpacity,
 } from "react-native";
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
+
+import { useNavigation } from "@react-navigation/native";
 const { width, height } = Dimensions.get("window");
 
 const MainProfile = () => {
+    const navigation = useNavigation();
     return (
         <ScrollView style={styles.container}>
             <View style={styles.backgroundImageContainer}>
@@ -45,7 +49,7 @@ const MainProfile = () => {
                     </View>
                     <Text style={styles.aboutText}>
                         Studies Bachelor of Science in Information Technology at
-                        MIT.
+                        USTP-CDO.
                     </Text>
                 </View>
                 <View style={styles.aboutSection}>
@@ -115,12 +119,40 @@ const MainProfile = () => {
             <View style={styles.detailsContainer}>
                 <Text style={styles.infoTitle}>Other Details</Text>
                 <View style={styles.aboutSection}>
-                    <View style={styles.iconPlaceholder}></View>
+                    <View style={styles.iconPlaceholder}>
+                        <Ionicons name="code-outline" size={30} color="#000" />
+                    </View>
                     <Text style={styles.aboutText}>Projects</Text>
+                    <TouchableOpacity
+                        style={styles.orangeButton}
+                        onPress={() => navigation.navigate("My Projects")}
+                    >
+                        <Ionicons
+                            name="chevron-forward-outline"
+                            size={15}
+                            color="#FFF"
+                        />
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.aboutSection}>
-                    <View style={styles.iconPlaceholder}></View>
+                    <View style={styles.iconPlaceholder}>
+                        <Ionicons
+                            name="hourglass-outline"
+                            size={30}
+                            color="#000"
+                        />
+                    </View>
                     <Text style={styles.aboutText}>Hobbies</Text>
+                    <TouchableOpacity
+                        style={styles.orangeButton}
+                        onPress={() => navigation.navigate("My Hobbies")}
+                    >
+                        <Ionicons
+                            name="chevron-forward-outline"
+                            size={15}
+                            color="#FFF"
+                        />
+                    </TouchableOpacity>
                 </View>
             </View>
         </ScrollView>
@@ -210,5 +242,11 @@ const styles = StyleSheet.create({
         width: "90%",
         height: 3,
         alignSelf: "center",
+    },
+    orangeButton: {
+        backgroundColor: "#d88720",
+        borderRadius: 5,
+        padding: 1,
+        marginLeft: 10,
     },
 });

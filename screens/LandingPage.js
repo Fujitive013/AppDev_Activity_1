@@ -24,7 +24,7 @@ const LandingPage = () => {
                 </Text>
                 <TouchableOpacity
                     style={styles.continueBtn}
-                    onPress={() => navigation.navigate("MainProfile")} // Wrap in an arrow function
+                    onPress={() => navigation.navigate("MainProfile")}
                 >
                     <Text style={styles.buttonText}>Continue</Text>
                 </TouchableOpacity>
