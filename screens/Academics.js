@@ -29,7 +29,11 @@ const Academics = () => {
         require("../assets/school-images/USTP/ustp2.jpg"),
         require("../assets/school-images/USTP/ustp3.jpg"),
     ];
-
+    const seniorHighschoolImages = [
+        require("../assets/school-images/PHINMA/coc1.jpg"),
+        require("../assets/school-images/PHINMA/coc2.jpg"),
+        require("../assets/school-images/PHINMA/coc3.jpg"),
+    ];
     const highschoolImages = [
         require("../assets/school-images/VNHS/vnhs1.jpg"),
         require("../assets/school-images/VNHS/vnhs2.jpg"),
@@ -73,12 +77,50 @@ const Academics = () => {
                                         : image
                                 }
                                 style={styles.image}
-                                resizeMode="stretch"
+                                resizeMode="fit"
                             />
                         </TouchableOpacity>
                     ))}
                 </ScrollView>
             </View>
+            <View style={styles.splitLine}></View>
+            <View style={styles.section}>
+                <View style={styles.header}>
+                    <Ionicons name="school-outline" size={24} color="#333" />
+                    <Text style={styles.sectionTitle}>Senior High School</Text>
+                </View>
+                <Text style={styles.schoolName}>
+                    PHINMA Cagayan de Oro College - Senior High School
+                </Text>
+                <Text style={styles.details}>
+                    Class of 2022
+                    {"\n"}Location: Purok 6 Brgy, Cagayan de Oro, 9000 Misamis
+                    Oriental, Philippines
+                </Text>
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    style={styles.imageScroll}
+                >
+                    {seniorHighschoolImages.map((image, index) => (
+                        <TouchableOpacity
+                            key={index}
+                            onPress={() => openModal(image)}
+                        >
+                            <Image
+                                source={
+                                    typeof image === "string"
+                                        ? { uri: image }
+                                        : image
+                                }
+                                style={styles.image}
+                                resizeMode="fit"
+                            />
+                        </TouchableOpacity>
+                    ))}
+                </ScrollView>
+            </View>
+            <View style={styles.splitLine}></View>
             <View style={styles.section}>
                 <View style={styles.header}>
                     <Ionicons name="school-outline" size={24} color="#333" />
@@ -109,12 +151,13 @@ const Academics = () => {
                                         : image
                                 }
                                 style={styles.image}
-                                resizeMode="stretch"
+                                resizeMode="fit"
                             />
                         </TouchableOpacity>
                     ))}
                 </ScrollView>
             </View>
+            <View style={styles.splitLine}></View>
             <View style={styles.section}>
                 <View style={styles.header}>
                     <Ionicons name="school-outline" size={24} color="#333" />
@@ -144,12 +187,13 @@ const Academics = () => {
                                         : image
                                 }
                                 style={styles.image}
-                                resizeMode="stretch"
+                                resizeMode="fit"
                             />
                         </TouchableOpacity>
                     ))}
                 </ScrollView>
             </View>
+            <View style={styles.splitLine}></View>
             <Modal
                 visible={modalVisible}
                 transparent={true}
@@ -240,6 +284,13 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 40,
         right: 20,
+    },
+    splitLine: {
+        backgroundColor: "#d88720",
+        width: "95%",
+        height: 3,
+        alignSelf: "center",
+        marginBottom: 24,
     },
 });
 
