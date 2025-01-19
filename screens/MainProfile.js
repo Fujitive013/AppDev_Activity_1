@@ -33,9 +33,10 @@ const MainProfile = () => {
                 <Text style={styles.nameText}>Axel L. Paredes</Text>
             </View>
             <View style={styles.tagsContainer}>
-                <Text style={styles.tags}>UI Design</Text>
                 <Text style={styles.tags}>BSIT</Text>
-                <Text style={styles.tags}>CITC</Text>
+                <Text style={styles.tags}>3rd Year</Text>
+                <Text style={styles.tags}>Track 2</Text>
+                <Text style={styles.tags}>UI Design</Text>
             </View>
             <View style={styles.detailsContainer}>
                 <Text style={styles.infoTitle}>About Me</Text>
@@ -86,7 +87,7 @@ const MainProfile = () => {
                 <Text style={styles.infoTitle}>Contact Me</Text>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
-                        <Ionicons name="call-outline" size={30} color="#000" />
+                        <Ionicons name="call" size={30} color="#000" />
                     </View>
                     <Text style={styles.aboutText}>0926-460-5988</Text>
                 </View>
@@ -98,7 +99,7 @@ const MainProfile = () => {
                 </View>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
-                        <Ionicons name="mail-outline" size={30} color="#000" />
+                        <Ionicons name="mail" size={30} color="#000" />
                     </View>
                     <Text style={styles.aboutText}>
                         paredes.axel456@gmail.com
@@ -106,18 +107,30 @@ const MainProfile = () => {
                 </View>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
-                        <Ionicons
-                            name="git-branch-outline"
-                            size={30}
-                            color="#000"
-                        />
+                        <Ionicons name="logo-github" size={30} color="#000" />
                     </View>
-                    <Text style={styles.aboutText}>Fujitive013</Text>
+                    <Text style={styles.aboutText}>github.com/Fujitive013</Text>
                 </View>
             </View>
             <View style={styles.splitLine}></View>
             <View style={styles.detailsContainer}>
                 <Text style={styles.infoTitle}>Other Details</Text>
+                <View style={styles.aboutSection}>
+                    <View style={styles.iconPlaceholder}>
+                        <Ionicons name="build-outline" size={30} color="#000" />
+                    </View>
+                    <Text style={styles.aboutText}>Skills and Experiences</Text>
+                    <TouchableOpacity
+                        style={styles.orangeButton}
+                        onPress={() => navigation.navigate("My Skills")}
+                    >
+                        <Ionicons
+                            name="chevron-forward-outline"
+                            size={15}
+                            color="#FFF"
+                        />
+                    </TouchableOpacity>
+                </View>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
                         <Ionicons name="code-outline" size={30} color="#000" />
@@ -266,7 +279,7 @@ const styles = StyleSheet.create({
     orangeButton: {
         backgroundColor: "#d88720",
         borderRadius: 5,
-        padding: 1,
-        marginLeft: 10,
+        padding: 4,
+        marginLeft: "auto",
     },
 });

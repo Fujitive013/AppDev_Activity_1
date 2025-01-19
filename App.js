@@ -8,6 +8,7 @@ import MyHobbies from "./screens/MyHobbies";
 import Motodachi from "./screens/Projects Screens/Motodachi";
 import ExploreLDCU from "./screens/Projects Screens/ExploreLDCU";
 import Academics from "./screens/Academics";
+import MySkills from "./screens/MySkills";
 
 const Stack = createNativeStackNavigator();
 
@@ -60,6 +61,13 @@ export default function App() {
                 <Stack.Screen
                     name="Academics"
                     component={Academics}
+                    options={{
+                        headerShown: true,
+                    }}
+                />
+                <Stack.Screen
+                    name="My Skills"
+                    component={MySkills}
                     options={{
                         headerShown: true,
                     }}

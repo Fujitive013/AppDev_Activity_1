@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "activity_1",
-    "slug": "activity_1",
+    "name": "My Profile",
+    "slug": "My Profile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,15 +20,10 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#f8f9fa"
       },
-      "package": "com.fujitive013.activity_1"
+      "package": "com.fujitive013.MyProfile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "33b3b616-88c8-4328-af39-a8b51a473181"
-      }
     }
   }
 }

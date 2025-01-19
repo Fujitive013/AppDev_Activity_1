@@ -1,26 +1,34 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const LandingPage = () => {
     const getGreeting = () => {
         const currentHour = new Date().getHours();
         if (currentHour < 12) {
-            return "Good Morning";
+            return { greeting: "Good Morning", icon: "partly-sunny-outline" };
         } else if (currentHour < 18) {
-            return "Good Afternoon";
+            return { greeting: "Good Afternoon", icon: "sunny" };
         } else {
-            return "Good Evening";
+            return { greeting: "Good Evening", icon: "moon-outline" };
         }
     };
 
     const navigation = useNavigation();
+    const { greeting, icon } = getGreeting();
 
     return (
         <View style={styles.container}>
             <View style={styles.textContainer}>
+                <Ionicons
+                    name={icon}
+                    size={100}
+                    color="#d88720"
+                    marginBottom="20"
+                />
                 <Text style={styles.welcomeText}>
-                    {getGreeting()}, Welcome to my Profile App!
+                    {greeting}, Welcome to my Profile App!
                 </Text>
                 <TouchableOpacity
                     style={styles.continueBtn}
@@ -44,6 +52,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        padding: 20,
     },
     welcomeText: {
         fontSize: 24,
