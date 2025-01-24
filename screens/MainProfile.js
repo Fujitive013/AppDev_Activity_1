@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
-
 import { useNavigation } from "@react-navigation/native";
 const { width, height } = Dimensions.get("window");
 
@@ -122,7 +121,9 @@ const MainProfile = () => {
                     <Text style={styles.aboutText}>Skills and Experiences</Text>
                     <TouchableOpacity
                         style={styles.orangeButton}
-                        onPress={() => navigation.navigate("My Skills")}
+                        onPress={() =>
+                            navigation.navigate("Skills and Experiences")
+                        }
                     >
                         <Ionicons
                             name="chevron-forward-outline"
@@ -139,46 +140,6 @@ const MainProfile = () => {
                     <TouchableOpacity
                         style={styles.orangeButton}
                         onPress={() => navigation.navigate("My Projects")}
-                    >
-                        <Ionicons
-                            name="chevron-forward-outline"
-                            size={15}
-                            color="#FFF"
-                        />
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.aboutSection}>
-                    <View style={styles.iconPlaceholder}>
-                        <Ionicons
-                            name="hourglass-outline"
-                            size={30}
-                            color="#000"
-                        />
-                    </View>
-                    <Text style={styles.aboutText}>Hobbies</Text>
-                    <TouchableOpacity
-                        style={styles.orangeButton}
-                        onPress={() => navigation.navigate("My Hobbies")}
-                    >
-                        <Ionicons
-                            name="chevron-forward-outline"
-                            size={15}
-                            color="#FFF"
-                        />
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.aboutSection}>
-                    <View style={styles.iconPlaceholder}>
-                        <Ionicons
-                            name="school-outline"
-                            size={30}
-                            color="#000"
-                        />
-                    </View>
-                    <Text style={styles.aboutText}>Academics</Text>
-                    <TouchableOpacity
-                        style={styles.orangeButton}
-                        onPress={() => navigation.navigate("Academics")}
                     >
                         <Ionicons
                             name="chevron-forward-outline"

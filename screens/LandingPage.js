@@ -4,6 +4,7 @@ import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const LandingPage = () => {
+    // Function to get the greeting message based on the current time
     const getGreeting = () => {
         const currentHour = new Date().getHours();
         if (currentHour < 12) {
@@ -21,6 +22,7 @@ const LandingPage = () => {
     return (
         <View style={styles.container}>
             <View style={styles.textContainer}>
+                {/* Display the greeting icon */}
                 <Ionicons
                     name={icon}
                     size={100}
@@ -28,6 +30,7 @@ const LandingPage = () => {
                     marginBottom="20"
                 />
                 <Text style={styles.welcomeText}>
+                    {/* Display the greeting message */}
                     {greeting}, Welcome to my Profile App!
                 </Text>
                 <TouchableOpacity

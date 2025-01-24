@@ -10,7 +10,9 @@ import React from "react";
 
 const MySkills = () => {
     return (
+        // Display the skills in a ScrollView for vertical scrolling
         <ScrollView contentContainerStyle={styles.container}>
+            {/* Display each skill on a card */}
             <View style={styles.skillContainer}>
                 <Image
                     source={require("../assets/skills/react_native.png")}

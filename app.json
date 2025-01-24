@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "My Profile",
-    "slug": "My Profile",
+    "slug": "MyProfile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,6 +24,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4a9204ec-9cc0-4c61-a959-91d1ea329205"
+      }
     }
   }
 }

@@ -12,7 +12,9 @@ import { useNavigation } from "@react-navigation/native";
 const MyProjects = () => {
     const navigation = useNavigation();
     return (
+        // Display the projects in a ScrollView for vertical scrolling
         <ScrollView contentContainerStyle={styles.container}>
+            {/* Display the ExploreLDCU project */}
             <View style={styles.projectContainer}>
                 <TouchableOpacity
                     style={styles.card}
@@ -25,6 +27,8 @@ const MyProjects = () => {
                     <Text style={styles.projectTitle}>ExploreLDCU!</Text>
                 </TouchableOpacity>
             </View>
+
+            {/* Display the Motodachi project */}
             <View style={styles.projectContainer}>
                 <TouchableOpacity
                     style={styles.card}
