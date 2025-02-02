@@ -7,6 +7,8 @@ import MyProjects from "./screens/MyProjects";
 import Motodachi from "./screens/Projects Screens/Motodachi";
 import ExploreLDCU from "./screens/Projects Screens/ExploreLDCU";
 import MySkills from "./screens/MySkills";
+import Login from "./screens/Auth/Login";
+import SignUp from "./screens/Auth/Signup";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +16,20 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen
+                    name="Login"
+                    component={Login}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="SignUp"
+                    component={SignUp}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
                 <Stack.Screen
                     name="LandingPage"
                     component={LandingPage}
