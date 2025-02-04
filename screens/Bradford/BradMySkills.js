@@ -15,31 +15,6 @@ const BradMySkills = () => {
             {/* Display each skill on a card */}
             <View style={styles.skillContainer}>
                 <Image
-                    source={require("../../assets/skills/react_native.png")}
-                    style={styles.skillImage}
-                />
-                <Text style={styles.skillTitle}>React Native</Text>
-                <Text style={styles.skillDescription}>
-                    I have experience building mobile applications with React
-                    Native, leveraging its components to create efficient,
-                    cross-platform solutions with a seamless user interface.
-                </Text>
-            </View>
-            <View style={styles.skillContainer}>
-                <Image
-                    source={require("../../assets/skills/expressJS.jpg")}
-                    style={styles.skillImage}
-                />
-                <Text style={styles.skillTitle}>ExpressJS</Text>
-                <Text style={styles.skillDescription}>
-                    I use ExpressJS to build robust and efficient backend
-                    systems, creating APIs and managing server-side logic for
-                    seamless communication between front-end and back-end
-                    systems.
-                </Text>
-            </View>
-            <View style={styles.skillContainer}>
-                <Image
                     source={require("../../assets/skills/app_prototype.png")}
                     style={styles.skillImage}
                 />
