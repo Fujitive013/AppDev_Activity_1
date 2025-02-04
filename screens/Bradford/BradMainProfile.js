@@ -12,30 +12,29 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
 const { width, height } = Dimensions.get("window");
 
-const MainProfile = () => {
+const BradMainProfile = () => {
     const navigation = useNavigation();
     return (
         <ScrollView style={styles.container}>
             <View style={styles.backgroundImageContainer}>
                 <Image
-                    source={require("../assets/banner.jpg")}
+                    source={require("../../assets/banner.jpg")}
                     style={styles.backgroundImage}
                 />
             </View>
             <View style={styles.profileImageContainer}>
                 <Image
-                    source={require("../assets/profile_pic.jpg")}
+                    source={require("../../assets/user.png")}
                     style={styles.profileImage}
                 />
             </View>
             <View style={styles.nameContainer}>
-                <Text style={styles.nameText}>Axel L. Paredes</Text>
+                <Text style={styles.nameText}>Jeffrey Bradford</Text>
             </View>
             <View style={styles.tagsContainer}>
-                <Text style={styles.tags}>BSIT</Text>
-                <Text style={styles.tags}>3rd Year</Text>
-                <Text style={styles.tags}>Track 2</Text>
                 <Text style={styles.tags}>UI Design</Text>
+                <Text style={styles.tags}>Graphic Designer</Text>
+                <Text style={styles.tags}>Prototyping</Text>
             </View>
             <View style={styles.detailsContainer}>
                 <Text style={styles.infoTitle}>About Me</Text>
@@ -48,8 +47,8 @@ const MainProfile = () => {
                         />
                     </View>
                     <Text style={styles.aboutText}>
-                        Studies Bachelor of Science in Information Technology at
-                        USTP-CDO.
+                        Studied Bachelor of Science in Information Technology at
+                        USTP Villanueva.
                     </Text>
                 </View>
                 <View style={styles.aboutSection}>
@@ -57,7 +56,7 @@ const MainProfile = () => {
                         <Ionicons name="home-outline" size={30} color="#000" />
                     </View>
                     <Text style={styles.aboutText}>
-                        Lives in Villanueva, Misamis Oriental, Philippines
+                        Lives in Tagoloan, Misamis Oriental, Philippines
                     </Text>
                 </View>
                 <View style={styles.aboutSection}>
@@ -68,7 +67,7 @@ const MainProfile = () => {
                             color="#000"
                         />
                     </View>
-                    <Text style={styles.aboutText}>April 5, 2004</Text>
+                    <Text style={styles.aboutText}>January 1, 2000</Text>
                 </View>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
@@ -78,7 +77,7 @@ const MainProfile = () => {
                             color="#000"
                         />
                     </View>
-                    <Text style={styles.aboutText}>Single</Text>
+                    <Text style={styles.aboutText}>Married</Text>
                 </View>
             </View>
             <View style={styles.splitLine}></View>
@@ -88,27 +87,29 @@ const MainProfile = () => {
                     <View style={styles.iconPlaceholder}>
                         <Ionicons name="call" size={30} color="#000" />
                     </View>
-                    <Text style={styles.aboutText}>0926-460-5988</Text>
+                    <Text style={styles.aboutText}>0987-654-3210</Text>
                 </View>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
                         <Ionicons name="logo-facebook" size={30} color="#000" />
                     </View>
-                    <Text style={styles.aboutText}>Axel Llagas Paredes</Text>
+                    <Text style={styles.aboutText}>Jeffrey Bradford</Text>
                 </View>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
                         <Ionicons name="mail" size={30} color="#000" />
                     </View>
                     <Text style={styles.aboutText}>
-                        paredes.axel456@gmail.com
+                        bradford.jeffrey@gmail.com
                     </Text>
                 </View>
                 <View style={styles.aboutSection}>
                     <View style={styles.iconPlaceholder}>
                         <Ionicons name="logo-github" size={30} color="#000" />
                     </View>
-                    <Text style={styles.aboutText}>github.com/Fujitive013</Text>
+                    <Text style={styles.aboutText}>
+                        github.com/UserNotFound
+                    </Text>
                 </View>
             </View>
             <View style={styles.splitLine}></View>
@@ -122,7 +123,7 @@ const MainProfile = () => {
                     <TouchableOpacity
                         style={styles.orangeButton}
                         onPress={() =>
-                            navigation.navigate("Skills and Experiences")
+                            navigation.navigate("Brad's Skills and Experiences")
                         }
                     >
                         <Ionicons
@@ -139,7 +140,7 @@ const MainProfile = () => {
                     <Text style={styles.aboutText}>Projects</Text>
                     <TouchableOpacity
                         style={styles.orangeButton}
-                        onPress={() => navigation.navigate("My Projects")}
+                        onPress={() => navigation.navigate("Brad's Projects")}
                     >
                         <Ionicons
                             name="chevron-forward-outline"
@@ -153,7 +154,7 @@ const MainProfile = () => {
     );
 };
 
-export default MainProfile;
+export default BradMainProfile;
 
 const styles = StyleSheet.create({
     container: {

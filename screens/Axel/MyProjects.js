@@ -21,7 +21,7 @@ const MyProjects = () => {
                     onPress={() => navigation.navigate("ExploreLDCU")}
                 >
                     <Image
-                        source={require("../assets/projects/map-app/adaptive-icon.png")}
+                        source={require("../../assets/projects/map-app/adaptive-icon.png")}
                         style={styles.image}
                     />
                     <Text style={styles.projectTitle}>ExploreLDCU!</Text>
@@ -35,7 +35,7 @@ const MyProjects = () => {
                     onPress={() => navigation.navigate("Motodachi")}
                 >
                     <Image
-                        source={require("../assets/projects/motodachi/text_logo_black.png")}
+                        source={require("../../assets/projects/motodachi/text_logo_black.png")}
                         style={styles.image}
                     />
                     <Text style={styles.projectTitle}>Motodachi</Text>

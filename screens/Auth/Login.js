@@ -21,14 +21,20 @@ const Login = () => {
             Alert.alert("Error", "Please enter both email and password.");
             return;
         }
-        if (email !== "paredesaxel1619@gmail.com" && password !== "123456") {
-            Alert.alert("Error", "User not found.");
-            return;
+        if (email == "paredesaxel1619@gmail.com" && password == "1") {
+            Alert.alert("Success", `Welcome, Axel Paredes!`);
+            navigation.navigate("MainProfile");
+        } else if (email == "user1@gmail.com" && password == "1") {
+            Alert.alert("Success", `Welcome, Jeffrey Bradford!`);
+            navigation.navigate("BradMainProfile");
+        } else {
+            Alert.alert(
+                "Login Failed",
+                "Incorrect email or password. Please try again."
+            );
         }
-        // Handle login logic here
-        navigation.navigate("MainProfile");
-        Alert.alert("Success", `Welcome, ${email}!`);
     };
+
     const handleSignUp = () => {
         navigation.navigate("SignUp");
     };

@@ -8,14 +8,14 @@ import {
 } from "react-native";
 import React from "react";
 
-const MySkills = () => {
+const BradMySkills = () => {
     return (
         // Display the skills in a ScrollView for vertical scrolling
         <ScrollView contentContainerStyle={styles.container}>
             {/* Display each skill on a card */}
             <View style={styles.skillContainer}>
                 <Image
-                    source={require("../assets/skills/react_native.png")}
+                    source={require("../../assets/skills/react_native.png")}
                     style={styles.skillImage}
                 />
                 <Text style={styles.skillTitle}>React Native</Text>
@@ -27,7 +27,7 @@ const MySkills = () => {
             </View>
             <View style={styles.skillContainer}>
                 <Image
-                    source={require("../assets/skills/expressJS.jpg")}
+                    source={require("../../assets/skills/expressJS.jpg")}
                     style={styles.skillImage}
                 />
                 <Text style={styles.skillTitle}>ExpressJS</Text>
@@ -40,7 +40,7 @@ const MySkills = () => {
             </View>
             <View style={styles.skillContainer}>
                 <Image
-                    source={require("../assets/skills/app_prototype.png")}
+                    source={require("../../assets/skills/app_prototype.png")}
                     style={styles.skillImage}
                 />
                 <Text style={styles.skillTitle}>App Prototyping</Text>
@@ -53,7 +53,7 @@ const MySkills = () => {
     );
 };
 
-export default MySkills;
+export default BradMySkills;
 
 const styles = StyleSheet.create({
     container: {

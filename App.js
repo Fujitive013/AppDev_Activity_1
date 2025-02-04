@@ -2,13 +2,16 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LandingPage from "./screens/LandingPage";
-import MainProfile from "./screens/MainProfile";
-import MyProjects from "./screens/MyProjects";
+import MainProfile from "./screens/Axel/MainProfile";
+import MyProjects from "./screens/Axel/MyProjects";
 import Motodachi from "./screens/Projects Screens/Motodachi";
 import ExploreLDCU from "./screens/Projects Screens/ExploreLDCU";
-import MySkills from "./screens/MySkills";
+import MySkills from "./screens/Axel/MySkills";
 import Login from "./screens/Auth/Login";
 import SignUp from "./screens/Auth/Signup";
+import BradMainProfile from "./screens/Bradford/BradMainProfile";
+import BradMySkills from "./screens/Bradford/BradMySkills";
+import BradMyProjects from "./screens/Bradford/BradMyProjects";
 
 const Stack = createNativeStackNavigator();
 
@@ -68,6 +71,29 @@ export default function App() {
                 <Stack.Screen
                     name="Skills and Experiences"
                     component={MySkills}
+                    options={{
+                        headerShown: true,
+                    }}
+                />
+
+                <Stack.Screen
+                    name="BradMainProfile"
+                    component={BradMainProfile}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+
+                <Stack.Screen
+                    name="Brad's Skills and Experiences"
+                    component={BradMySkills}
+                    options={{
+                        headerShown: true,
+                    }}
+                />
+                <Stack.Screen
+                    name="Brad's Projects"
+                    component={BradMyProjects}
                     options={{
                         headerShown: true,
                     }}
